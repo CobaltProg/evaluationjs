@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>exercice-1</title>
+    <title>exercice-5</title>
+
 </head>
+
 <body>
-    
+    <form>
+        <fieldset>
+            <legend>Simple Regex</legend>
+
+            <div class="form-group">
+                <label for="name">First Name</label>
+                <input type="text" id='name' placeholder="Enter your first name">
+                <p id ="nameresult"></p>
+            </div>
+            <div class="form-group">
+                <label for="secondname">Second Name</label>
+                <input id="secondname" type="text" placeholder="Enter your second name" />
+                <p id ="secondnameresult"></p>
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input id="email" type="text" placeholder="Enter your e-mail" />
+                <p id ="emailresult"></p>
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input id="password" type="text" placeholder="Enter your password" />
+                <p id ="passwordresult"></p>
+            </div>
+            <div onclick="validForm()" style="margin: 10px;">Submit</div>
+        </fieldset>
+    </form>
+    <script src="index.js"></script>
 </body>
 </html>

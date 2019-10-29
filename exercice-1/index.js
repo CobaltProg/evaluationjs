@@ -1,59 +1,70 @@
+'use strict';
 
-class matrix {
-    constructor() {
-
-    }
-        /**
-         * generator table matrix
-         * @param {number} xAxis, yAxis
-         * @return {number} result 
-         */
-        var gridGenerator  = function gridGenerator(xAxis,yAxis) {
-            var elTable = document.createElement('table');
-            var elBody = document.querySelector('body');
-    
-            for (var i = 0; i < myTable.length; i++){
-                var elTr = document.createElement('tr');
-                var row = myTable[i];
-
-                 for (var j = 0; j < row.length; j++){
-                     var elTd = document.createElement('td');
-
-                     elTd.textContent = row[j];
-                     elTr.appendChild(elTd);
-                }
-
-                elTable.appendChild(elTr);
-         }
-
-            elBody.appendChild(elTable);
-        }
-            return;
-         }; 
-         /**
-          * case Random 
-          * @param {number} 
-          * @return {number} result 
-          */
-        var caseRandom = function caseRandom(GG){
-
-
-            return;
-        }
-        /**
-          * color Random 
-          * @param {number} 
-          * @return {number} result 
-          */
-        var colorRandom = function colorRandom(){
-
-            return;
-        }
-    
-        
-    }
+/**
+ * grid generator
+ * @constructor
+ * @param {number} xAxis
+ * @param {number} yAxis
+ */
+var GridGenerator = function GridGenerator(xAxis, yAxis) {
+  this.xAxis = xAxis;
+  this.yAxis = yAxis;
   
+}
 
+/**
+ * render
+ */
+GridGenerator.prototype.render = function() {
+  this.renderGrid();
+}
 
+/**
+ * Set interval
+ */
+GridGenerator.prototype.setInterval = function(el) {
+  setTimeout(function() {
+    el.style.background = this.randomColor();
+    this.setInterval(el);
+  }.bind(this), 500)
+}
 
+/**
+ * GridGenrator
+ */
+GridGenerator.prototype.renderGrid = function() {
+  var elBody = document.querySelector('body');
+  var elTable = document.createElement('table');
 
+  for (var i = 0; i < this.xAxis; i += 1) {
+    var elTr = document.createElement('tr');
+
+    for (var j = 0; j < this.yAxis; j += 1) {
+      var elTd = document.createElement('td');
+      this.setInterval(elTd);
+
+      elTd.style.width = '40px';
+      elTd.style.height = '40px';
+
+      elTr.appendChild(elTd);
+    }
+
+    elTable.appendChild(elTr);
+  }
+
+  elBody.appendChild(elTable);
+}
+
+/**
+ * randomColor
+ * @return {string} color
+ */
+GridGenerator.prototype.randomColor = function() {
+  var colors = ['red', 'yellow', 'blue', 'red', 'green','purple'];
+
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+var gridGenerator = new GridGenerator(5, 5);
+
+gridGenerator.render();
