@@ -54,7 +54,7 @@ function validForm() {
     }
     //Check password
     if (passwordRegex.test(password)) {
-        passwordresult.innerHTML = "password is invalid";
+        passwordresult.innerHTML = "password is valid";
     } else {
         passwordresult.innerHTML = "password is invalid";
     }

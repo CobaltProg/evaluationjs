@@ -1,36 +1,34 @@
 /**BatlleShip */
 
 var GridSize = 35;
-
-
-var BoardContainer = document.getElementById("gameboard");
+var Board = document.getElementById("gameboard");
 var ship = document.getElementById('ships');
-var ships = [0, 2, 3, 4, 5, 5]
+var ships = [0, 2, 3, 4, 5, 5];
 var array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 
-// make the grid columns and rows
+// create grid
 for (i = 0; i < 12; i++) {
     for (j = 0; j < 12; j++) {
 
         // create a new div HTML element for each grid square and make it the right size
-        var square = document.createElement("div");
-        BoardContainer.appendChild(square);
+        var tab = document.createElement("div");
+        Board.appendChild(tab);
 
         // div element give unique ID 
-        square.id = array[i] + j;
+        tab.id = array[i] + j;
 
         // row or column number with Size
         var topPosition = j  * GridSize;
         var leftPosition = i * GridSize;
 
         // positioning grid square 
-        square.style.top = topPosition + 'px';
-        square.style.left = leftPosition + 'px';
+        tab.style.top = topPosition + 'px';
+        tab.style.left = leftPosition + 'px';
     }
 }
 
-
-var gameBoard = [
+//matrix 0 = no ships number = ships
+var InsertBoard = [
     [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -45,10 +43,9 @@ var gameBoard = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
-/*
+Board.addEventListener("click",aim, false);
+//function click color
 function aim(){
 
-}*/
-    
-
+}
 

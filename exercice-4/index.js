@@ -1,7 +1,7 @@
 var wm = document.getElementById("world-map");
 wm.addEventListener("load", function() {
 	
-	var caption = document.querySelector("#map-caption"); //
+	var caption = document.querySelector("#map-caption"); 
     var selectedCountries = document.getElementsByClassName("country");
     
 	for (var i = 0, length = selectedCountries.length; i < length; i++) {
@@ -16,8 +16,8 @@ wm.addEventListener("load", function() {
 		
 		// add mouseout event listener on all selected countries
 		selectedCountries[i].addEventListener("mouseout", function() {
-            caption.innerHTML = ""; //remove the country name
-            this.style.fill = ""; //remove background color
+            caption.innerHTML = "elemId"; //remove the country name
+            this.style.fill = "red"; //remove background color
         });	
 
         
