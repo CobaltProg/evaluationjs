@@ -29,7 +29,7 @@ function GridCreate() {
 }
 GridCreate();
 
-//select case html
+//select case 
 var cases = document.querySelectorAll(".case");
 
 //check Cases

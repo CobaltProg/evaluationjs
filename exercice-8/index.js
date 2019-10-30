@@ -18,12 +18,12 @@ for (i = 0; i < 12; i++) {
         tab.id = array[i] + j;
 
         // row or column number with Size
-        var topPosition = j  * GridSize;
-        var leftPosition = i * GridSize;
+        var rowPosition = j  * GridSize;
+        var columnPosition = i * GridSize;
 
-        // positioning grid square 
-        tab.style.top = topPosition + 'px';
-        tab.style.left = leftPosition + 'px';
+        //positioning grid square 
+        tab.style.top = rowPosition + 'px';
+        tab.style.left = columnPosition + 'px';
     }
 }
 
