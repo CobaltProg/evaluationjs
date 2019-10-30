@@ -1,4 +1,4 @@
-'use strict'
+
 /*
         letters: /^[a-zA-Z]*$/, // letters only
         name: /^[a-zA-Z \-']*$/, // letters, spaces, - and '
@@ -11,6 +11,7 @@
     
 */
 
+/*Form Regex*/
 function validForm() {
 
     //Id value
@@ -33,29 +34,29 @@ function validForm() {
     
     //Check name
     if (nameRegex.test(name) == true) {
-        nameresult.innerHTML = "name is valid"
+        nameresult.innerHTML = "name is valid";
        
     } else {
-        nameresult.innerHTML = "name is invalid"   
+        nameresult.innerHTML = "name is invalid"; 
     }
     //Check second name
     if (SecondnameRegex.test(secondname)) {
-        secondnameresult.innerHTML = "second name is valid"
+        secondnameresult.innerHTML = "second name is valid";
     } else {
-        secondnameresult.innerHTML = "second name is invalid"
+        secondnameresult.innerHTML = "second name is invalid";
     }
 
     //Check email
     if (emailRegex.test(email)) {
-        emailresult.innerHTML = "email is valid"
+        emailresult.innerHTML = "email is valid";
     } else {
-        emailresult.innerHTML = "email is invalid"
+        emailresult.innerHTML = "email is invalid";
     }
     //Check password
     if (passwordRegex.test(password)) {
-        passwordresult.innerHTML = "password is invalid"
+        passwordresult.innerHTML = "password is invalid";
     } else {
-        passwordresult.innerHTML = "password is invalid"
+        passwordresult.innerHTML = "password is invalid";
     }
     
 }

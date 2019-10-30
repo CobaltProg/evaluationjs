@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>exercice-1</title>
+    <title>exercice-8</title>
 </head>
 <body>
-    
+        <h1>BattleShip</h1>
+        <div>
+                <h4 id="Carrier">Porte Avion</h4>
+                <h4 id="Battleship">Croisseur</h4>
+                <h4 id="Cruiser"> Contre-torpilleur </h4>
+                <h4 id="Submarine"> Sous-marin </h4>
+                <h4 id="Destroyer">Torpilleur</h4>
+        </div>
+        <div id="gameboard">
+
+        </div>
+            <style>      
+                    body {
+                        margin: 60px auto;
+                        width: 70%;
+                        max-width: 950px;
+                        font-family: arial;
+                    }
+                    h4{
+                        margin: 10px;
+                    }
+                    
+                    
+                    p, button, input {
+                        font-size: 1.5em;
+                        line-height: 1.4em;
+                        color: #333;
+                        margin-bottom:1em;
+                    }
+                    #gameboard {
+                        position:relative;
+                        margin:0 auto 2em auto;
+                        width:500px;
+                        height:500px;
+                    }
+                    #gameboard div {
+                        position:absolute;
+                        -webkit-box-sizing: border-box; 
+                        -moz-box-sizing: border-box;    
+                        box-sizing: border-box;      
+                        background: #f6f8f9; 
+                        border: 1px solid black;
+                        width:50px;
+                        height:50px;
+                    }
+                </style>
+            
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

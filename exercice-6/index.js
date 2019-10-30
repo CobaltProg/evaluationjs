@@ -9,20 +9,22 @@
         
     }
 */
+/*Check number phone and return valid or invalie number*/
 
-	function checkPhoneNumber(){
-
+function checkPhoneNumber(){
+        //Id value
         var phone= document.getElementById("phone").value;
-        var phoneReg =  /* /^(0|\+33)[1-9]( *[0-9]{2}){4}$/; */ "^(06|07|01)[0-9]{8}$";
+        //Regex
+        var phoneRegex =  /* /^(0|\+33)[1-9]( *[0-9]{2}){4}$/; */ "^(06|07|01)[0-9]{8}$";
+       
        
         //Check phone
-        if (phone.match(phoneReg)) {
-            alert("true");
+        if (phone.match(phoneRegex)) {
+            alert("valid number well done");
          } else {
-             alert("false");
+             alert("invalid number try again");
          }
-
-
+       
     }
     var submit = document.getElementById("submit");
     submit.addEventListener('click', function() {
